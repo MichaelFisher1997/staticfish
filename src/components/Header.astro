@@ -1,0 +1,43 @@
+---
+import Logo from './Logo.astro';
+const links = [
+  { href: '/', text: 'Home' },
+  { href: '/services', text: 'Services' },
+  { href: '/pricing', text: 'Pricing' },
+  { href: '/portfolio', text: 'Portfolio' },
+  { href: '/about', text: 'About' },
+  { href: '/contact', text: 'Contact' },
+];
+---
+
+<header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
+  <nav class="container mx-auto flex justify-between items-center p-4">
+    <Logo />
+    <div class="hidden md:flex items-center space-x-6">
+      {links.map(link => <a href={link.href} class="text-slate-700 hover:text-slate-900 transition-colors duration-300">{link.text}</a>)}
+    </div>
+    <!-- Mobile menu button -->
+    <div class="md:hidden">
+      <button id="mobile-menu-button" class="text-slate-700 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+      </button>
+    </div>
+  </nav>
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white">
+    <div class="pt-2 pb-3 space-y-1">
+        {links.map(link => <a href={link.href} class="block py-2 px-4 text-base text-slate-700 hover:bg-slate-100">{link.text}</a>)}
+    </div>
+  </div>
+</header>
+
+<script>
+  const menuButton = document.getElementById('mobile-menu-button');
+  const menu = document.getElementById('mobile-menu');
+
+  if (menuButton && menu) {
+    menuButton.addEventListener('click', function() {
+      menu.classList.toggle('hidden');
+    });
+  }
+</script>

@@ -1,0 +1,101 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Pricing | Staticfish">
+  <div class="container mx-auto py-16 px-4">
+    <div class="text-center max-w-3xl mx-auto">
+      <h1 class="text-4xl sm:text-5xl font-bold text-slate-900">Pricing Plans</h1>
+      <p class="mt-4 text-lg text-slate-600">Choose the perfect plan for your business. All plans include a one-off setup fee and monthly hosting.</p>
+    </div>
+
+    <!-- Pricing Tiers -->
+    <div class="grid md:grid-cols-3 gap-8 mt-12 max-w-6xl mx-auto">
+      <!-- Starter -->
+      <div id="starter" class="bg-white border border-slate-200 rounded-lg p-8 flex flex-col">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">Starter</h2>
+        <p class="text-slate-600 mb-6 flex-grow">Perfect for getting your business online with a professional, fast-loading site.</p>
+        <p class="text-4xl font-bold text-slate-900">£150 <span class="text-lg font-normal text-slate-500">one-off</span></p>
+        <p class="text-lg mt-1 text-slate-600">+ £50/mo hosting</p>
+        <ul class="text-left my-8 space-y-3 text-slate-700">
+          <li class="flex items-center"><svg class="w-5 h-5 text-sky-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>5-page static site</li>
+          <li class="flex items-center"><svg class="w-5 h-5 text-sky-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Responsive design</li>
+          <li class="flex items-center"><svg class="w-5 h-5 text-sky-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Contact form integration</li>
+        </ul>
+        <a href="/contact" class="mt-auto w-full inline-block py-3 px-6 border border-slate-300 rounded-md text-base font-medium text-slate-700 bg-white hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 transition-colors">Get Started</a>
+      </div>
+
+      <!-- Growth -->
+      <div id="growth" class="bg-white border-2 border-sky-500 rounded-lg p-8 relative flex flex-col">
+        <span class="absolute top-0 -translate-y-1/2 bg-sky-500 text-white text-xs font-bold px-3 py-1 rounded-full">Most Popular</span>
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">Growth</h2>
+        <p class="text-slate-600 mb-6 flex-grow">For businesses ready to scale with a blog and content management system.</p>
+        <p class="text-4xl font-bold text-slate-900">£250 <span class="text-lg font-normal text-slate-500">one-off</span></p>
+        <p class="text-lg mt-1 text-slate-600">+ £70/mo hosting</p>
+        <ul class="text-left my-8 space-y-3 text-slate-700">
+          <li class="flex items-center"><svg class="w-5 h-5 text-sky-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Everything in Starter</li>
+          <li class="flex items-center"><svg class="w-5 h-5 text-sky-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Blog & CMS integration</li>
+          <li class="flex items-center"><svg class="w-5 h-5 text-sky-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Basic SEO setup</li>
+        </ul>
+        <a href="/contact" class="mt-auto w-full inline-block py-3 px-6 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 transition-colors">Get Started</a>
+      </div>
+
+      <!-- Scale -->
+      <div id="scale" class="bg-white border border-slate-200 rounded-lg p-8 flex flex-col">
+        <h2 class="text-2xl font-bold text-slate-900 mb-4">Scale</h2>
+        <p class="text-slate-600 mb-6 flex-grow">For businesses needing advanced features like e-commerce and custom integrations.</p>
+        <p class="text-4xl font-bold text-slate-900">£500 <span class="text-lg font-normal text-slate-500">one-off</span></p>
+        <p class="text-lg mt-1 text-slate-600">+ £90/mo hosting</p>
+        <ul class="text-left my-8 space-y-3 text-slate-700">
+          <li class="flex items-center"><svg class="w-5 h-5 text-sky-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Everything in Growth</li>
+          <li class="flex items-center"><svg class="w-5 h-5 text-sky-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>E-commerce integration</li>
+          <li class="flex items-center"><svg class="w-5 h-5 text-sky-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Custom integrations</li>
+        </ul>
+        <a href="/contact" class="mt-auto w-full inline-block py-3 px-6 border border-slate-300 rounded-md text-base font-medium text-slate-700 bg-white hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 transition-colors">Get Started</a>
+      </div>
+    </div>
+
+    <!-- Comparison Table -->
+    <div class="mt-20">
+      <h2 class="text-3xl font-bold text-center mb-8 text-slate-900">Feature Comparison</h2>
+      <div class="overflow-x-auto bg-white rounded-lg shadow-md">
+        <table class="min-w-full text-left text-sm">
+          <thead class="bg-slate-50">
+            <tr class="border-b border-slate-200">
+              <th class="p-4 font-semibold text-slate-800">Feature</th>
+              <th class="p-4 font-semibold text-center text-slate-800">Starter</th>
+              <th class="p-4 font-semibold text-center text-slate-800">Growth</th>
+              <th class="p-4 font-semibold text-center text-slate-800">Scale</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200">
+            <tr class="text-slate-600"><td class="p-4">Static Pages</td><td class="p-4 text-center">Up to 5</td><td class="p-4 text-center">Up to 10</td><td class="p-4 text-center">Unlimited</td></tr>
+            <tr class="text-slate-600"><td class="p-4">Blog & CMS</td><td class="p-4 text-center text-slate-400">-</td><td class="p-4 text-center text-sky-500 font-bold">✓</td><td class="p-4 text-center text-sky-500 font-bold">✓</td></tr>
+            <tr class="text-slate-600"><td class="p-4">E-commerce</td><td class="p-4 text-center text-slate-400">-</td><td class="p-4 text-center text-slate-400">-</td><td class="p-4 text-center text-sky-500 font-bold">✓</td></tr>
+            <tr class="text-slate-600"><td class="p-4">Cloudflare Hosting</td><td class="p-4 text-center text-sky-500 font-bold">✓</td><td class="p-4 text-center text-sky-500 font-bold">✓</td><td class="p-4 text-center text-sky-500 font-bold">✓</td></tr>
+            <tr class="text-slate-600"><td class="p-4">Support</td><td class="p-4 text-center">Email</td><td class="p-4 text-center">Priority Email</td><td class="p-4 text-center">Dedicated Support</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="mt-20 max-w-4xl mx-auto">
+      <h2 class="text-3xl font-bold text-center mb-8 text-slate-900">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="font-semibold text-lg text-slate-800">What does the one-off fee cover?</h3>
+          <p class="mt-2 text-slate-600">The one-off fee covers the initial design, development, and setup of your website on our hosting platform.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="font-semibold text-lg text-slate-800">Can I upgrade or downgrade my plan?</h3>
+          <p class="mt-2 text-slate-600">Yes, you can change your plan at any time. The new rate will be applied from the next billing cycle.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-sm">
+          <h3 class="font-semibold text-lg text-slate-800">What is the cancellation policy?</h3>
+          <p class="mt-2 text-slate-600">You can cancel your monthly hosting plan at any time with no questions asked. You will retain ownership of the website code.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

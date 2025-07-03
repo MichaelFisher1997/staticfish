@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Staticfish | Fast, static sites for small businesses">
+  <!-- Hero Section -->
+  <section class="text-center py-20 sm:py-24 lg:py-32">
+    <div class="container mx-auto">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900">Fast, static sites for small businesses</h1>
+      <p class="mt-6 max-w-2xl mx-auto text-lg text-slate-600">We build blazing-fast, secure, and reliable websites that just work.</p>
+      <div class="mt-8 flex justify-center gap-4">
+        <a href="/pricing" class="inline-block py-3 px-6 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 transition-colors">View Pricing</a>
+        <a href="/contact" class="inline-block py-3 px-6 border border-slate-300 rounded-md text-base font-medium text-slate-700 bg-white hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Overview Section -->
+  <section class="py-20 sm:py-24 bg-white">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-12">Our Packages</h2>
+      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <!-- Starter Plan -->
+        <div class="bg-slate-50 rounded-lg p-8 shadow-sm">
+          <h3 class="text-2xl font-bold text-slate-900 mb-4">Starter</h3>
+          <p class="text-slate-600 mb-4">Perfect for getting your business online.</p>
+          <p class="text-3xl font-bold text-slate-900 mb-4">£150 <span class="text-lg font-normal text-slate-500">one-off</span></p>
+          <p class="text-xl text-slate-800 mb-6">+ £50/mo hosting</p>
+          <a href="/pricing#starter" class="font-medium text-sky-600 hover:text-sky-700 transition-colors">Learn More &rarr;</a>
+        </div>
+
+        <!-- Growth Plan -->
+        <div class="bg-slate-50 rounded-lg p-8 shadow-sm">
+          <h3 class="text-2xl font-bold text-slate-900 mb-4">Growth</h3>
+          <p class="text-slate-600 mb-4">For businesses ready to scale with content.</p>
+          <p class="text-3xl font-bold text-slate-900 mb-4">£250 <span class="text-lg font-normal text-slate-500">one-off</span></p>
+          <p class="text-xl text-slate-800 mb-6">+ £70/mo hosting</p>
+          <a href="/pricing#growth" class="font-medium text-sky-600 hover:text-sky-700 transition-colors">Learn More &rarr;</a>
+        </div>
+
+        <!-- Scale Plan -->
+        <div class="bg-slate-50 rounded-lg p-8 shadow-sm">
+          <h3 class="text-2xl font-bold text-slate-900 mb-4">Scale</h3>
+          <p class="text-slate-600 mb-4">For businesses needing advanced features.</p>
+          <p class="text-3xl font-bold text-slate-900 mb-4">£500 <span class="text-lg font-normal text-slate-500">one-off</span></p>
+          <p class="text-xl text-slate-800 mb-6">+ £90/mo hosting</p>
+          <a href="/pricing#scale" class="font-medium text-sky-600 hover:text-sky-700 transition-colors">Learn More &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

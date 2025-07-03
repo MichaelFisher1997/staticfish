@@ -1,0 +1,29 @@
+{
+  "name": "website",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "astro dev",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "test": "npx vitest",
+    "test:ui": "npx vitest --ui",
+    "test:ci": "npx vitest run --coverage"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "latest",
+    "astro": "latest",
+    "resend": "^4.6.0",
+    "tailwindcss": "latest"
+  },
+  "devDependencies": {
+    "@playwright/test": "latest",
+    "@testing-library/jest-dom": "latest",
+    "@testing-library/preact": "latest",
+    "@vitest/coverage-v8": "latest",
+    "happy-dom": "latest",
+    "vitest": "latest"
+  }
+}

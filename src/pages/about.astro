@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About Us | Staticfish">
+  <div class="container mx-auto py-12 px-4">
+    <div class="text-center">
+      <h1 class="text-4xl font-bold">About Staticfish</h1>
+      <p class="mt-4 text-lg max-w-2xl mx-auto">We're a small, dedicated team passionate about helping small businesses succeed online.</p>
+    </div>
+
+    <!-- Brand Story -->
+    <div class="max-w-4xl mx-auto mt-12">
+      <h2 class="text-3xl font-bold text-center mb-8">Our Story</h2>
+      <p class="mb-4">Staticfish was founded on a simple idea: the web has become too slow and complicated for most small businesses. We believe in the power of static sites—they're incredibly fast, highly secure, and affordable to run. Our mission is to bring these benefits to small business owners, so they can focus on what they do best, not on maintaining a complex website.</p>
+      <p>We handle everything from design to deployment, providing a hassle-free experience and a final product that is built to last.</p>
+    </div>
+
+    <!-- Team Section -->
+    <div class="mt-20">
+      <h2 class="text-3xl font-bold text-center mb-8">Our Team</h2>
+      <div class="flex flex-col md:flex-row justify-center items-center gap-12">
+        <!-- Team Member 1 -->
+        <div class="text-center">
+          <img src="https://picsum.photos/seed/team1/200/200" alt="Team member Jane Doe" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+          <h3 class="text-xl font-bold">Jane Doe</h3>
+          <p class="text-gray-500">Founder & Lead Developer</p>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="text-center">
+          <img src="https://picsum.photos/seed/team2/200/200" alt="Team member John Smith" class="w-32 h-32 rounded-full mx-auto mb-4 object-cover">
+          <h3 class="text-xl font-bold">John Smith</h3>
+          <p class="text-gray-500">UI/UX Designer</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
