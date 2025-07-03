@@ -13,12 +13,20 @@ export const onRequest = defineMiddleware(async (context, next) => {
     'max-age=31536000; includeSubDomains; preload'
   );
 
-  // A basic Content Security Policy (CSP). This is a powerful header that requires careful configuration.
-  // This policy allows resources (scripts, styles, images) only from the site's own origin.
-  // It may need to be adjusted if you add third-party resources in the future.
+  // Updated Content Security Policy (CSP) to allow Google Fonts and Cloudflare Insights.
   response.headers.set(
     'Content-Security-Policy',
-    "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self';"
+    "default-src 'self'; " +
+    "script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; " +
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
+    "font-src 'self' https://fonts.gstatic.com; " +
+    "img-src 'self' data:;"
+  );
+
+  // Add a Permissions-Policy to control browser features for added security.
+  response.headers.set(
+    'Permissions-Policy',
+    'camera=(), microphone=(), geolocation=(), payment=()'
   );
 
   return response;
