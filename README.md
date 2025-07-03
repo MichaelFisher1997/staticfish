@@ -1,47 +1,82 @@
-# Astro Starter Kit: Minimal
+# Staticfish Website
 
-```sh
-npm create astro@latest -- --template minimal
-```
+This repository contains the source code for the Staticfish website, a modern, responsive, and fast static site built with Astro and styled with Tailwind CSS. It features a custom contact form that forwards submissions via email using the Resend service.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## ✨ Features
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- **Modern Tech Stack**: Built with [Astro](https://astro.build/) for performance and [Tailwind CSS](https://tailwindcss.com/) for a utility-first design.
+- **Fully Responsive**: A clean, professional design that looks great on all devices.
+- **Email Forwarding**: A secure contact form that uses the [Resend](https://resend.com/) API to forward submissions, managed via a serverless API route.
+- **Containerized**: Dockerfiles for both development and production environments, ensuring consistency and ease of deployment.
+- **Environment-Based Configuration**: Securely manages API keys and other settings using environment variables.
 
-## 🚀 Project Structure
+## 🛠 Tech Stack
 
-Inside of your Astro project, you'll see the following folders and files:
+- **Framework**: [Astro](https://astro.build/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Email Service**: [Resend](https://resend.com/)
+- **Containerization**: [Docker](https://www.docker.com/)
+- **Testing**: [Vitest](https://vitest.dev/)
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 🚀 Getting Started
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Follow these instructions to get the project up and running on your local machine.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Prerequisites
 
-Any static assets, like images, can be placed in the `public/` directory.
+- [Node.js](https://nodejs.org/) (v18 or higher)
+- [npm](https://www.npmjs.com/)
+- [Docker](https://www.docker.com/get-started) (optional, for containerized setup)
 
-## 🧞 Commands
+### Local Development Setup
 
-All commands are run from the root of the project, from a terminal:
+1.  **Clone the repository:**
+    ```sh
+    git clone https://github.com/MichaelFisher1997/staticfish.git
+    cd staticfish
+    ```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+2.  **Install dependencies:**
+    ```sh
+    npm install
+    ```
 
-## 👀 Want to learn more?
+3.  **Set up environment variables:**
+    -   Create a `.env` file by copying the example file:
+        ```sh
+        cp .env.example .env
+        ```
+    -   Open the `.env` file and add your Resend API key and email addresses.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+4.  **Run the development server:**
+    ```sh
+    npm run dev
+    ```
+    The site will be available at `http://localhost:4322`.
+
+### Docker Setup
+
+1.  **Build the development image:**
+    ```sh
+    docker build -t staticfish-dev .
+    ```
+
+2.  **Run the development container:**
+    ```sh
+    docker run -p 4322:4322 -v .:/app --env-file .env staticfish-dev
+    ```
+
+3.  **For production, use the multi-stage Dockerfile:**
+    ```sh
+    docker build -f Dockerfile.prod -t staticfish-prod .
+    docker run -p 4321:4321 --env-file .env staticfish-prod
+    ```
+
+## ⚙️ Available Scripts
+
+| Command         | Action                                               |
+| :-------------- | :--------------------------------------------------- |
+| `npm run dev`   | Starts the local development server.                 |
+| `npm run build` | Builds the site for production to the `./dist/` dir. |
+| `npm run preview` | Previews the production build locally.               |
+| `npm run test`  | Runs the test suite using Vitest.                    |
